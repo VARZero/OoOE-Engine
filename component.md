@@ -37,7 +37,7 @@ FIFO 메모리로 구현하고, 개당 24개 입니다.
 ### Reorder Buffer
 FIFO 메모리로 구현하고, Entry 수는 64개 입니다.
 
-## 구현을 위한 추가 컴포넌트
+## 구현을 위한 추가 컴포넌트와 컴포넌트의 동작
 ### Register Ailas Table (RAT)
 논리 레지스터와 물리 레지스터 관계를 나타내는 Table입니다.
 ### Field
@@ -47,12 +47,19 @@ FIFO 메모리로 구현하고, Entry 수는 64개 입니다.
 - End ROB Number: 마지막으로 커밋되야 하는 ROB 번호입니다.
 ### 동작
 #### 새로운 레지스터 할당 시
-1. 안해
+1. 
 2. 
 #### 외부에서 논리 레지스터 접근시
+
 ## Real Register File (RRF)
 실제 데이터를 담는 Register File 입니다.
 ### Field
 - Physical Register Number ***[INDEX]*** 물리 레지스터의 번호는 Index로 사용됩니다.
 - Value: 해당 레지스터의 값입니다.
+### 동작
+
+## Reservation Station
+### 동작
+
+## Reorder Buffer(ROB)
 ### 동작
