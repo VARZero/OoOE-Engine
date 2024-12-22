@@ -31,8 +31,28 @@ OoOE 엔진에는 여러가지 요소가 있습니다.
 ### ISA
 https://github.com/VARZero/MakeModCpu16
 ### 물리 레지스터 수
-논리 레지스터 수의 4배인 64개로 지정합니다.
+논리 레지스터 수의 4배인 64개로 지정합니다. 
 ### Reservation Station
 FIFO 메모리로 구현하고, 개당 24개 입니다.
 ### Reorder Buffer
 FIFO 메모리로 구현하고, Entry 수는 64개 입니다.
+
+## 구현을 위한 추가 컴포넌트
+### Register Ailas Table (RAT)
+논리 레지스터와 물리 레지스터 관계를 나타내는 Table입니다.
+### Field
+- Physical Register Number ***[INDEX]*** 물리 레지스터의 번호는 Index로 사용됩니다.
+- Valid: 해당 Field가 유효한지 나타내는 Indicater입니다.
+- Logical Register Number: 어떤 논리 레지스터에 매핑되는지 나타내는 Indicater입니다.
+- End ROB Number: 마지막으로 커밋되야 하는 ROB 번호입니다.
+### 동작
+#### 새로운 레지스터 할당 시
+1. 안해
+2. 
+#### 외부에서 논리 레지스터 접근시
+## Real Register File (RRF)
+실제 데이터를 담는 Register File 입니다.
+### Field
+- Physical Register Number ***[INDEX]*** 물리 레지스터의 번호는 Index로 사용됩니다.
+- Value: 해당 레지스터의 값입니다.
+### 동작
